@@ -252,8 +252,7 @@ class CopyableBehavior extends ModelBehavior {
  */
 	private function __copyRecord($Model) {
 		$Model->create();
-		$Model->set($this->record);
-		return $Model->saveAll(null, array('validate' => false));
+		return $Model->saveAll($this->record, array('validate' => false));
 	}
 	
 /**
